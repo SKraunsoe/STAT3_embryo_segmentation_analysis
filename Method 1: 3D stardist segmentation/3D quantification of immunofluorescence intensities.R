@@ -65,9 +65,9 @@ All_embryos_data <- rbindlist(STAT3_embryos, fill = TRUE)
 All_embryos_data <- cbind(all_result$V1, All_embryos_data)
 
 # Add a column with the embryo stage
-STAT3_embryo_staged <- transform(All_embryos_data, Embryo_stage= ifelse(V1 %like% "E3.5", "E3.5", 
-                                                                        ifelse(V1 %like% "E4.5", "E4.5", 
-                                                                               ifelse(V1 %like% "Diapause", "Diapaused", ""))))
+STAT3_embryo_staged <- transform(All_embryos_data, Embryo_stage= ifelse(V1 %like% "E3.5_embryo", "E3.5", 
+                                                                        ifelse(V1 %like% "E4.5_embryo", "E4.5", 
+                                                                               ifelse(V1 %like% "Diapause_embryo", "Diapaused", ""))))
 
 
 # Split by channel 
